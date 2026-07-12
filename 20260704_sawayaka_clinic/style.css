@@ -8,15 +8,22 @@
   --back1:#fff;
   --back2:#E9F6FF;
   --navy:#1A3F7A;
+  --orange:#FFA384;
 }
 
 body {
-  max-width: 1080px;
-  margin: 0 auto 0 auto;
+  margin: 0;
+  padding-top: 80px;
   background-color: var(--back1);
   color: var(--text);
   font-family: "Noto Sans JP", sans-serif;
   font-size: 15px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 h1{
@@ -33,6 +40,15 @@ ul {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  background: #fff;
+  z-index: 1000;
 }
 
 #logo {
@@ -40,28 +56,53 @@ header {
 }
 
 #logo img {
-  height: 100px;
+  height: 80px;
   width: auto;
   display: block;
 }
 
-#global-nav {
-  display:flex;
-  align-items:center;
-  gap:32px;
-  margin-right:32px;
+#global-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-right: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+#global-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#global-nav a:hover {
+  color: var(--orange);
+}
+
+/* #global-nav a:visited {
+  color: var(--text);
+} */
+
 .reserve img{
-  width:120px;
+  width: 180px;
+  padding-left: 40px;
   height:auto;
   display:block;
 }
 
 /* メインビジュアル */
-#hero {
-  position: relative;
-  height: 400px;
+.hero {
+  width: 100%;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: 1000px;
+  object-fit: cover;
 }
 
 
