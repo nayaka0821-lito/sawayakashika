@@ -52,13 +52,6 @@ header {
   margin-right:32px;
 }
 
-#global-nav a{
-  font-size:14px;
-  font-weight:700;
-  color:var(--navy);
-  white-space:nowrap;
-}
-
 .reserve img{
   width:120px;
   height:auto;
