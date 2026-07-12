@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap');
+
+/* font-family: "Noto Sans JP", sans-serif; */
+/* font-family: "Noto Serif JP", serif; */
+
+:root{
+  --text:#0D2B5E;
+  --back1:#fff;
+  --back2:#E9F6FF;
+  --navy:#1A3F7A;
+}
+
+body {
+  max-width: 1080px;
+  margin: 0 auto 0 auto;
+  background-color: var(--back1);
+  color: var(--text);
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 15px;
+}
+
+h1{
+font-size: 64px;
+font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 0px;
+}
+
+/* ヘッダー */
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo {
+  margin-right: auto;
+}
+
+#logo img {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+#global-nav {
+  display:flex;
+  align-items:center;
+  gap:32px;
+  margin-right:32px;
+}
+
+#global-nav a{
+  font-size:14px;
+  font-weight:700;
+  color:var(--navy);
+  white-space:nowrap;
+}
+
+.reserve img{
+  width:120px;
+  height:auto;
+  display:block;
+}
+
+/* メインビジュアル */
+#hero {
+  position: relative;
+  height: 400px;
+}
+
+
