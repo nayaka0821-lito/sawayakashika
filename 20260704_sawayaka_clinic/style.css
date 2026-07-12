@@ -27,13 +27,38 @@ body {
 }
 
 h1{
-font-size: 64px;
+font-size: 40px;
 font-weight: bold;
+font-family: "Noto Serif JP", serif;
 }
 
 ul {
   list-style: none;
   margin-bottom: 0px;
+}
+
+.more {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.more a {
+  display: inline-block;
+  width: 220px;
+  padding: 16px 0;
+
+  background-color: var(--navy);
+  color: #fff;
+  border: 2px solid var(--navy);
+
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.more a:hover {
+  background-color: #fff;
+  color: var(--navy);
 }
 
 /* ヘッダー */
@@ -101,8 +126,54 @@ header {
 .hero img {
   display: block;
   width: 100%;
-  height: 1000px;
+  height: 800px;
   object-fit: cover;
 }
 
+/* ブログ */
+.blog {
+  padding: 80px 0;
+}
 
+.blog-wrapper {
+  display: flex;
+  gap: 80px;
+}
+
+.news,
+.tips {
+  flex: 1;
+}
+
+.news h2,
+.tips h2 {
+  font-size: 48px;
+  font-family: "Noto Serif JP", serif;
+  color: var(--text);
+  margin-bottom: 40px;
+}
+
+.news-post {
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.date {
+  font-size: 20px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.news-post a {
+  display: block;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+  transition: color 0.3s;
+}
+
+.news-post a:hover {
+  color: var(--orange);
+}
