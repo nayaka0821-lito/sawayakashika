@@ -13,11 +13,10 @@
 
 body {
   margin: 0;
-  padding-top: 80px;
   background-color: var(--back1);
   color: var(--text);
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .container {
@@ -27,7 +26,7 @@ body {
 }
 
 h1{
-font-size: 40px;
+font-size: 30px;
 font-weight: bold;
 font-family: "Noto Serif JP", serif;
 }
@@ -52,7 +51,7 @@ ul {
   border: 2px solid var(--navy);
 
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -66,7 +65,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -81,7 +80,7 @@ header {
 }
 
 #logo img {
-  height: 80px;
+  height: 70px;
   width: auto;
   display: block;
 }
@@ -99,7 +98,7 @@ header {
 #global-nav a {
   color: var(--text);
   text-decoration: none;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -107,15 +106,29 @@ header {
   color: var(--orange);
 }
 
-/* #global-nav a:visited {
+#global-nav a:visited {
   color: var(--text);
-} */
+} 
 
-.reserve img{
-  width: 180px;
-  padding-left: 40px;
-  height:auto;
-  display:block;
+.reserve a{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:140px;
+  height:40px;
+  margin-left: 30px;
+  background:var(--orange);
+  color:#fff;
+  font-size:20px;
+  font-weight:bold;
+  text-decoration:none;
+  border:4px solid var(--orange);
+}
+
+.reserve a:hover{
+  background:#fff;
+  color:var(--orange);
+  border: 4px solid var(--orange);
 }
 
 /* メインビジュアル */
@@ -123,16 +136,15 @@ header {
   width: 100%;
 }
 
-.hero img {
-  display: block;
-  width: 100%;
-  height: 800px;
-  object-fit: cover;
+.hero img{
+  display:block;
+  width:100%;
+  height:auto;
 }
 
 /* ブログ */
 .blog {
-  padding: 80px 0;
+  padding: 70px 0;
 }
 
 .blog-wrapper {
@@ -176,4 +188,510 @@ header {
 
 .news-post a:hover {
   color: var(--orange);
+}
+
+/* クリニック紹介 */
+
+.clinic-section{
+  background-image:url(images/background.png);
+  background-size: 105%;
+  padding:70px 0;
+}
+
+.clinic-grid{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:30px;
+  padding-top: 30px;
+}
+
+.clinic-card{
+  width:300px;
+  background:#fff;
+  border:1px solid #cfcfcf;
+  padding:12px;
+  text-align:center;
+}
+
+.clinic-img{
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+
+.clinic-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.clinic-label{
+  font-size:20px;
+  font-weight:bold;
+  color:var(--navy);
+  line-height:1.4;
+}
+
+.greeting-section{
+  background:var(--back2);
+  padding:70px 0;
+}
+
+.greeting-card{
+  display:flex;
+  justify-content:space-between;
+  align-items:stretch;
+  margin-bottom:40px;
+}
+
+.greeting-text{
+  width:58%;
+  background:#fff;
+  border:1px solid #cfcfcf;
+  padding:35px;
+}
+
+.greeting-text p{
+  line-height:2;
+  font-weight: bold;
+  margin-bottom:20px;
+}
+
+.greeting-text p:last-child{
+  margin-bottom:0;
+}
+
+.greeting-photo{
+  width:33%;
+}
+
+.greeting-photo img{
+  width:100%;
+  height: 100%;
+  display:block;
+  border:1px solid #cfcfcf;
+}
+
+/* 診療案内 */
+.menu-section > .container{
+  padding:36px 40px 40px;
+}
+
+.menu-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px 80px;
+}
+
+.menu-item{
+  display:block;
+  cursor:pointer;
+  border-radius:4px;
+  box-shadow:0 3px 6px rgba(0,0,0,0.15);
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.menu-item img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:4px;}
+
+/* ホバーで少し浮かせる */
+.menu-item:hover{
+  box-shadow:0 10px 15px rgba(0,0,0,0.18);
+}
+
+/* クリック中：沈み込む */
+.menu-item:active{
+  transform:translateY(3px) scale(0.98);
+  box-shadow:0 1px 2px rgba(0,0,0,0.15);
+}
+ 
+/* アクセス */
+
+.access-section{
+  background-image:url(images/background.png);
+  background-size: 105%;
+  padding:70px 0;
+}
+ 
+.access-flex{
+  display:flex;
+  align-items:stretch;
+  gap:28px;
+}
+ 
+.access-table{
+  flex:0 0 46%;
+  border-collapse:collapse;
+  width:46%;
+}
+.access-table th,
+.access-table td{
+  border:1px solid var(--navy);
+  padding:18px 16px;
+  text-align:left;
+  vertical-align:middle;
+  font-size:14px;
+}
+.access-table th{
+  width:90px;
+  background:var(--back2);
+  color:var(--navy);
+  font-weight:700;
+  white-space:nowrap;
+}
+.access-table td{
+  background-color: var(--back1);
+  color:var(--navy);
+  line-height:1.8;
+}
+ 
+.map-placeholder{
+  flex:1;
+  border-radius:4px;
+  overflow:hidden;
+  min-height:100%;
+  background:var(--back2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--navy);
+  font-size:14px;
+}
+
+/* CTA */
+.cta-section{
+  padding:70px 0;
+}
+
+.cta-section > .container{
+  padding:44px 40px 48px;
+  text-align:center;
+}
+.cta-section h2{
+  font-size:24px;
+  font-weight:700;
+  color:var(--navy);
+  margin:0 0 20px;
+}
+.cta-section p{
+  font-size:14px;
+  color:#444;
+  max-width:640px;
+  margin:0 auto 22px;
+  line-height:1.9;
+}
+.cta-tel{
+  font-size:18px;
+  font-weight:700;
+  color:var(--navy);
+  margin-bottom:28px;
+}
+.cta-buttons{
+  display:flex;
+  justify-content:center;
+  gap:60px;
+  flex-wrap:wrap;
+}
+.cta-buttons a{
+  display:inline-block;
+  min-width:220px;
+  text-align:center;
+  padding:16px 30px;
+  background-color: var(--navy);
+  color: #fff;
+  border: 2px solid var(--navy);
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 700;
+}
+.cta-buttons a:hover{
+  background-color: #fff;
+  color: var(--navy);
+}
+
+.cta-buttons .reserve{
+  background:var(--orange);
+  text-decoration:none;
+  border:4px solid var(--orange);  
+}
+
+.cta-buttons .reserve:hover{
+  background:#fff;
+  color:var(--orange);
+  border: 4px solid var(--orange);
+}
+.cta-buttons .contact{
+  background:var(--navy);
+}
+
+/* フッター */
+.site-footer{
+  background:var(--back2);
+  padding:44px 0 36px;
+}
+.site-footer .container{
+  max-width:1160px;
+  margin:0 auto;
+  padding:0 40px;
+}
+.footer-top{
+  display:flex;
+  align-items:flex-start;
+  gap:40px;
+  margin-bottom:32px;
+}
+
+
+.footer-brand img{
+  height:76px;
+  width:auto;
+  display:block;
+}
+
+.footer-nav{
+  font-size:13px;
+  color:var(--navy);
+  flex:0 0 auto;
+}
+.footer-nav ul{
+  list-style:none;
+}
+.footer-nav > ul{
+  columns:1;
+}
+.footer-nav > ul > li{
+  font-weight:700;
+  margin-bottom:6px;
+  line-height:1.9;
+}
+.footer-nav > ul > li > ul{
+  padding-left:16px;
+  margin-bottom:4px;
+}
+.footer-nav > ul > li > ul li{
+  font-weight:400;
+  line-height:1.9;
+}
+.footer-nav li::before{
+  content:"・";
+}
+.footer-nav ul ul li::before{
+  content:"・";
+}
+
+.footer-hours{
+  width:100%;
+  max-width:520px;
+  border-collapse:collapse;
+  background:#fff;
+  margin-bottom:20px;
+  font-size:13px;
+}
+.footer-hours th,
+.footer-hours td{
+  border:1px solid #b7d3e8;
+  padding:8px 6px;
+  text-align:center;
+}
+.footer-hours th{
+  background:#eaf4fb;
+  color:var(--navy);
+  font-weight:700;
+}
+
+.footer-address{
+  font-size:13px;
+  color:var(--navy);
+  margin-bottom:18px;
+}
+
+.footer-reserve{
+  display:block;
+  max-width:520px;
+  text-align:center;
+  background:var(--orange);
+  text-decoration:none;
+  border:4px solid var(--orange);  
+  color:#fff;
+  font-weight:700;
+  font-size:16px;
+  padding:16px;
+  border-radius:2px;
+  transition:opacity .15s ease, transform .12s ease;
+}
+.footer-reserve:hover{
+  background:#fff;
+  color:var(--orange);
+  border: 4px solid var(--orange);
+}
+.footer-reserve:active{
+  transform:translateY(2px);
+}
+
+/* ============================================================
+   レスポンシブ対応（スマホのみ）
+   ============================================================ */
+@media (max-width: 768px) {
+
+  .container {
+    padding: 0 16px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  /* ヘッダー：折り返さず、要素を縮小して1行に収める */
+  header {
+    flex-wrap: nowrap;
+    padding: 10px 12px;
+    gap: 8px;
+    overflow-x: auto;
+  }
+  #logo img {
+    height: clamp(32px, 10vw, 50px);
+  }
+  #global-nav ul {
+    flex-wrap: nowrap;
+    gap: clamp(6px, 2vw, 16px);
+    margin-right: 8px;
+  }
+  #global-nav a {
+    font-size: clamp(10px, 2.6vw, 15px);
+    white-space: nowrap;
+  }
+  .reserve a {
+    width: clamp(64px, 20vw, 110px);
+    height: clamp(28px, 9vw, 36px);
+    margin-left: 8px;
+    font-size: clamp(11px, 3vw, 16px);
+    flex-shrink: 0;
+  }
+
+  /* ブログ一覧 */
+  .blog {
+    padding: 50px 0;
+  }
+  .blog-wrapper {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .news h2,
+  .tips h2 {
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
+  .news-post a {
+    font-size: 16px;
+  }
+
+  /* クリニック紹介 */
+  .clinic-section {
+    padding: 50px 0;
+    background-size: cover;
+  }
+  .clinic-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  .clinic-card {
+    width: 100%;
+  }
+
+  /* ごあいさつ */
+  .greeting-section {
+    padding: 50px 0;
+  }
+  .greeting-card {
+    flex-direction: column;
+  }
+  .greeting-text,
+  .greeting-photo {
+    width: 100%;
+  }
+  .greeting-photo img {
+    height: auto;
+  }
+  .greeting-text {
+    padding: 24px;
+  }
+
+  /* 診療案内 */
+  .menu-section > .container {
+    padding: 30px 20px;
+  }
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* アクセス */
+  .access-section {
+    padding: 50px 0;
+    background-size: cover;
+  }
+  .access-flex {
+    flex-direction: column;
+  }
+  .access-table,
+  .map-placeholder {
+    width: 100%;
+    flex: none;
+  }
+  .map-placeholder {
+    min-height: 240px;
+  }
+  .access-table th,
+  .access-table td {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+
+  /* CTA */
+  .cta-section {
+    padding: 50px 0;
+  }
+  .cta-section > .container {
+    padding: 32px 20px 36px;
+  }
+  .cta-section h2 {
+    font-size: 20px;
+  }
+  .cta-buttons {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cta-buttons a {
+    font-size: 18px;
+    padding: 14px 20px;
+    width: 100%;
+    max-width: 260px;
+  }
+
+  /* フッター */
+  .site-footer .container {
+    padding: 0 20px;
+  }
+  .footer-top {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .footer-hours,
+  .footer-reserve {
+    max-width: none;
+  }
+  .footer-nav {
+    font-size: 12px;
+  }
 }
